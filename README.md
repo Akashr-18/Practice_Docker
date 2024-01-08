@@ -39,7 +39,7 @@ docker ps -a
 docker build -t myhelloapp .
 ```
 
-- To run the docker image on the container
+- To run the docker image on the container (in detached mode)
 ```bash
 docker run -d -p 5000:5000 myhelloapp
 ```
@@ -54,4 +54,28 @@ docker stop container_id
 docker login
 docker tag myhelloapp <username>/<reponame>
 docker push <username>/<reponame>
+```
+
+## Ways to create an image
+- Create image using Dockerfile
+- Pull image from DockerHub
+- Create image from Docker container itself.
+
+- Pull image from DockerHub
+```bash
+docker pull ubuntu
+docker run -it ubuntu /bin/bash
+```
+Or we can directly run also
+```bash
+docker run -it kalilinux/kali-rolling /bin/bash
+```
+
+- To delete the image
+```bash
+docker rmi <imagename>
+```
+Or if tag is different from latest
+```bash
+docker rmi <imagename>:<tag>
 ```
