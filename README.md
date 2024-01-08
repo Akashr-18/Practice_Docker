@@ -12,25 +12,46 @@ CMD ["python", "app.py"]
 
 ## Commands:
 
-- To build a image
+- To view the docker location, info and version
 ```bash
-docker build -t myhelloapp .
+where docker
+docker info
+docker -v
 ```
+
 - To view the image that was created
 ```bash
 docker images
+```
+
+- To check the running containers
+```bash
+docker ps
+```
+
+- To check all the containers
+```bash
+docker ps -a
+```
+
+- To build a image
+```bash
+docker build -t myhelloapp .
 ```
 
 - To run the docker image on the container
 ```bash
 docker run -d -p 5000:5000 myhelloapp
 ```
-- To check the containers
-```bash
-docker ps
-```
 
 - To stop the containers running
 ```bash
 docker stop container_id
+```
+
+- Pushing the docker image to DockerHub
+```bash
+docker login
+docker tag myhelloapp <username>/<reponame>
+docker push <username>/<reponame>
 ```
