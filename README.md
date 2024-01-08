@@ -1,6 +1,6 @@
-### DOCKER
+## DOCKER
 
-## File name should be strictly Dockerfile
+File name should be strictly <b>Dockerfile</b>
 
 ```bash
 FROM python:3.8   #python 3.8 is taking from dockerhub repo
