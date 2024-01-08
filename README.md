@@ -1,3 +1,5 @@
+### DOCKER
+
 ## File name should be strictly Dockerfile
 
 ```bash
@@ -21,7 +23,7 @@ docker images
 
 - To run the docker image on the container
 ```bash
-docker run -p 5000:5000 myhelloapp
+docker run -d -p 5000:5000 myhelloapp
 ```
 - To check the containers
 ```bash
