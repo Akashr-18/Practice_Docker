@@ -10,25 +10,25 @@ CMD ["python", "app.py"]
 
 ## Commands:
 
-#To build a image
+- To build a image
 ```bash
 docker build -t myhelloapp .
 ```
-#To view the image that was created
+- To view the image that was created
 ```bash
 docker images
 ```
 
-#To run the docker image on the container
+- To run the docker image on the container
 ```bash
 docker run -p 5000:5000 myhelloapp
 ```
-#To check the containers
+- To check the containers
 ```bash
 docker ps
 ```
 
-#To stop the containers running
+- To stop the containers running
 ```bash
 docker stop container_id
 ```
