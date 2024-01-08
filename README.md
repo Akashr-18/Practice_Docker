@@ -61,17 +61,18 @@ docker push <username>/<reponame>
 - Pull image from DockerHub
 - Create image from Docker container itself.
 
-- Pull image from DockerHub
+- Pulling the image from DockerHub (in interactive mode it provides terminal) 
 ```bash
 docker pull ubuntu
+docker images
 docker run -it ubuntu /bin/bash
 ```
-Or we can directly run also
+Or we can directly run the image from DockerHub without pulling (Here anyways it will first check from the local DockerEngine and then goes for DockerHub)
 ```bash
 docker run -it kalilinux/kali-rolling /bin/bash
 ```
 
-- To delete the image
+- To delete the image (Use -f to forcefully delete the image)
 ```bash
 docker rmi <imagename>
 ```
