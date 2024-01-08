@@ -1,10 +1,12 @@
 ## File name should be strictly Dockerfile
 
+```bash
 FROM python:3.8   #python 3.8 is taking from dockerhub repo
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
+```
 
 ## Commands:
 
