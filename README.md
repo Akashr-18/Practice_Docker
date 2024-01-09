@@ -57,9 +57,9 @@ docker push <username>/<reponame>
 ```
 
 ## Ways to create an image
-- Create image using Dockerfile
-- Pull image from DockerHub
-- Create image from Docker container itself.
+- 1. Create image using Dockerfile
+- 2. Pull image from DockerHub
+- 3. Create image from Docker container itself.
 
 - Pulling the image from DockerHub (in interactive mode it provides terminal) 
 ```bash
@@ -79,4 +79,19 @@ docker rmi <imagename>
 Or if tag is different from latest
 ```bash
 docker rmi <imagename>:<tag>
+```
+
+- Running image directly from DockerHub
+```bash
+docker run -p 8080:8080 jenkins/jenkins:lts
+```
+
+- 3. Create image from Docker container itself.
+```bash
+docker images #ubuntu is already there
+docker run --name newcontainer -it ubuntu /bin/bash
+docker ps -a
+docker diff newcontainer
+docker commit newcontainer newimage
+docker images  #Now newimag will be created
 ```
