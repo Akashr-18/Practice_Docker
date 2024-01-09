@@ -50,19 +50,24 @@ docker ps
 docker ps -a
 ```
 
-- To build a image
+- To stop the containers running
+```bash
+docker stop container_id
+```
+
+## Ways to create an image
+- Create image using Dockerfile
+- Pull image from DockerHub
+- Create image from Docker container itself.
+
+- 1. To build a image (Using Dockerfile)
 ```bash
 docker build -t myhelloapp .
 ```
 
-- To run the docker image on the container (in detached mode)
+- To run the docker image on the container (in detached mode)(Type: PORT)
 ```bash
 docker run -d -p 5000:5000 myhelloapp
-```
-
-- To stop the containers running
-```bash
-docker stop container_id
 ```
 
 - Pushing the docker image to DockerHub
@@ -72,23 +77,18 @@ docker tag myhelloapp <username>/<reponame>
 docker push <username>/<reponame>
 ```
 
-## Ways to create an image
-- 1. Create image using Dockerfile
-- 2. Pull image from DockerHub
-- 3. Create image from Docker container itself.
-
-- Pulling the image from DockerHub (in interactive mode it provides terminal) 
+- 2. Pulling the image from DockerHub (in interactive mode it provides terminal) (Type: Bash)
 ```bash
 docker pull ubuntu
 docker images
 docker run -it ubuntu /bin/bash
 ```
-Or we can directly run the image from DockerHub without pulling (Here anyways it will first check from the local DockerEngine and then goes for DockerHub)
+Or we can directly run the image from DockerHub without pulling (Here anyways it will first check from the local DockerEngine and then goes for DockerHub) (Type: Bash)
 ```bash
 docker run -it kalilinux/kali-rolling /bin/bash
 ```
 
-- Running image directly from DockerHub
+- Running image directly from DockerHub (Type: Port)
 ```bash
 docker run -p 8080:8080 jenkins/jenkins:lts
 ```
