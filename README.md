@@ -14,7 +14,7 @@ In Terminal
 
 ```bash
 docker build -t newimage .
-docker run -d -p 5000:5000 newimage
+docker run -d -p 5000:5000 newimage  #Detached mode. Type is Port
 ```
 
 ```bash
@@ -30,7 +30,7 @@ In Terminal
 
 ```bash
 docker build -t newimage .
-docker run -it newcontainer newimage /bin/bash
+docker run -it newcontainer newimage /bin/bash  #Interactive mode. Type is Bash
 ```
 
 ## Commands:
