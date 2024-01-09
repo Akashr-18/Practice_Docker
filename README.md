@@ -88,15 +88,6 @@ Or we can directly run the image from DockerHub without pulling (Here anyways it
 docker run -it kalilinux/kali-rolling /bin/bash
 ```
 
-- To delete the image (Use -f to forcefully delete the image)
-```bash
-docker rmi <imagename>
-```
-Or if tag is different from latest
-```bash
-docker rmi <imagename>:<tag>
-```
-
 - Running image directly from DockerHub
 ```bash
 docker run -p 8080:8080 jenkins/jenkins:lts
@@ -110,4 +101,13 @@ docker ps -a
 docker diff newcontainer
 docker commit newcontainer newimage
 docker images  #Now newimag will be created
+```
+
+- To delete the image (Use -f to forcefully delete the image)
+```bash
+docker rmi <imagename>
+```
+Or if tag is different from latest
+```bash
+docker rmi <imagename>:<tag>
 ```
