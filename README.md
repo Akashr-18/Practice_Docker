@@ -10,6 +10,13 @@ RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
 ```
 
+In Terminal
+
+```bash
+docker build -t newimage .
+docker run -d -p 5000:5000 newimage
+```
+
 ```bash
 FROM ubuntu     
 COPY . /tmp
