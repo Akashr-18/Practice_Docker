@@ -10,6 +10,22 @@ RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
 ```
 
+```bash
+FROM ubuntu     
+COPY . /tmp
+WORKDIR /tmp
+RUN echo "Hello World"
+ENV myname akash       #Variable and value
+ADD test.tar.gz /tmp   #ADD -> For unzipping files from local or internet(url) to tmp directory
+```
+
+In Terminal
+
+```bash
+docker build -t newimage .
+docker run -it newcontainer newimage /bin/bash
+```
+
 ## Commands:
 
 - To view the docker location, info and version
