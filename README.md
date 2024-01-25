@@ -1,6 +1,6 @@
 ## DOCKER
 
-File name should be strictly <b>Dockerfile</b>
+File name should be strictly <b>Dockerfile</b> only.
 
 ```bash
 FROM python:3.8   #python 3.8 is taking from dockerhub repo
